@@ -5,7 +5,7 @@
 #include <SDL_image.h>
 
 using namespace std;
-
+//brandon's comment
 //Function declarations
 void openGamepad();
 bool loadTexture(string image, GLuint &textureID);
