@@ -13,18 +13,30 @@ class Player{                       //explore x/y acceleration
 	// all jumping/falling
 	jumping(){
 		if(!falling)
-		    yvel = 12;
+		    yvel = -12;
 		    falling = true;
 	}	
 
-
+	void moveUp(){
+		jump();
+		y+= yvel;
+	}
+	void movedown(){
+		yvel += 1;
+		y+= vel;
+	}
+	void moveLeft(){
+		x=+ xvel;
+	}
+	void moveRight(){
+		x+= xvel;
+	}
 	//border collision take into account that it looks at top left corner
 	border collision()
-	if(y>= 440)
+	if(y > 440){
 	   falling = false;
-
 	   yvel =0;
-
-	if(falling)
-	   yvel-= 1;
+	   y = 440;
+	}
+	
 	}
